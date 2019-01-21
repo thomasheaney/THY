@@ -1,0 +1,107 @@
+.dp {
+
+    &-cta {
+
+
+        @include  u-paddingLeft--s;
+        @include  u-paddingRight--s;
+        @include  u-paddingTop--xs;
+        @include  u-paddingBottom--xs;
+        background-color : #F8981C;
+        color : #fff;
+        border-radius :                 $defaultBorderRadius;
+        text-align : center;
+        font-weight : bold;
+
+
+        &__large
+            {
+            @include  u-paddingLeft--m;
+            @include  u-paddingRight--m;
+            @include  u-paddingTop--s;
+            @include  u-paddingBottom--s;
+            font-size : $ms2;
+        }
+
+        &--target {
+            color : #fff;
+            font-size : $ms2;
+            text-transform : uppercase;
+        }
+
+        &__button { 
+
+            margin: 0 auto;
+            font-size : $ms2;
+            border : none; 
+            color : #fff;
+            display : block;
+        }
+     }
+
+     &-price {
+        @include u-paddingTop--s;
+        @include u-marginBottom--m;
+
+        text-align:right;
+        &--value {
+            color : $textColorEmphasise;
+            font-size : $ms4;
+            font-weight : $fontWeightSemiBold;
+        }
+        &--suffix {font-size : $ms0; font-weight : $fontWeightSemiBold;}
+        &--description {display : block; color : $textColorLight; font-size : $ms-2;}
+    }
+
+     &-contact {
+         @include u-display--flex();
+         @include flex-col();
+         @include flex-v-center();
+         &-item {
+            @include u-paddingLeft--xs;
+            @include u-paddingBottom--xs;
+            display : block;
+
+            &--telephone {
+                @include u-marginTop--xs;
+                @include u-marginBottom--xs;
+                font-weight:                    $fontWeightSemiBold;
+                font-size :					    $ms3;
+                color:                          $headingColor;
+            }
+        }
+
+         
+
+         .dp-cta { width : 75%; }
+     }
+
+     &-body-text {
+         ul { @include u-paddingLeft--m;@include u-marginBottom--s;}
+        li { @include u-marginBottom--xs;}
+     }
+
+     
+
+     &-call {
+         @include u-marginTop--m;
+         display : block;
+         text-align : center;
+         &--prefix,
+         &--suffix,
+         &--number {font-size : $ms2; display : block;}
+
+         &--number { 
+             @include u-paddingBottom--xs;
+             @include u-paddingTop--xs;
+             color : $headingColor;
+             font-size : $ms4; 
+             font-weight : $fontWeightSemiBold;
+             cursor : default;
+             &:hover {text-decoration : none;} 
+             
+         }
+     }
+}
+
+

@@ -1,0 +1,22 @@
+.o-base-wrapper {
+   
+    width : 100%;
+
+}
+
+.o-content--wrapper
+{
+     max-width:                          1140px;
+    margin-right:                       auto;
+    margin-left:                        auto;
+}
+
+
+.o-main-content-wrapper
+{
+    @include u-padding--s;
+    background-color : #fff;
+     max-width:                          1140px;
+    margin-right:                       auto;
+    margin-left:                        auto;
+}

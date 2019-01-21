@@ -1,0 +1,103 @@
+﻿/*-------------------------------------------    
+    Definitions: Colors     
+-------------------------------------------*/
+
+$siteHeaderBgColor :                    #5586af;
+$siteFooterBgColor :                    #5586af;
+
+$ctaColor :                             #2f2b48;
+$ctaColorLight :                        #5586af;
+
+
+$navMenuBgColor :                       #2f2b48;
+$headingColor:                          #022958;
+$highlightColor :                       #f4b86f;
+
+$textColorDark :                        #000000;
+$textColor :                            #333333;
+$textColorLight :                       #666666;
+$textColorFade:                         #767676;
+$textLinkColor:                         #2455c3;
+$textColorEmphasise:                    #FE2840;
+
+$borderColor :                          #E2E4ED;
+$defaultBorderRadius :                  5px;
+
+$defaultTextColor :                     $textColor;
+
+$hoverHighlightColor :                  #F2F0FA;
+
+$teaserHoverColor :                     #FBF4EC;
+
+$successColor :                         #69DD95;
+$successColorLight :                    #B4EECA;
+$warningColor :                         #F5C85C;
+$warningColorLight :                    #FAE3AD;
+$errorColor :                           #F26175;
+$errorColorLight :                      #F8B0BA;
+
+$offerTeaserBgColor :                   #F8f8F8;
+$formInputColor :                       #fbfbfb;
+
+/*-------------------------------------------    
+    Definitions: Units     
+-------------------------------------------*/
+
+// https://spec.fm/specifics/8-pt-grid
+
+$spacing :		                        8;				
+$xxs :                                  $spacing / 2;
+$xs :                                   $spacing;
+$xsPlus :                               $spacing * 1.5;
+$s :                                    $spacing * 2;
+$m :                                    $spacing * 3;
+$l :                                    $spacing * 4;
+$xl :                                   $spacing * 5;
+$xxl :                                  $spacing * 6;
+$xxxl:                                  $spacing * 8;
+
+
+
+
+$lineHeight :                           24px;
+$lineHeightSmall:                       $lineHeight * 0.75;
+$lineHeightLarge:                       $lineHeight * 1.25;
+$sectionSpacingSmall :                  $lineHeight / 2 ;
+$sectionSpacing :                       $lineHeight ;
+$sectionSpacingLarge :                  $lineHeight * 2;
+$sectionSpacingVeryLarge :              $lineHeight * 3;
+$sectionSpacingExtraLarge :             $lineHeight * 4;
+/*-------------------------------------------    
+    Definitions: Fonts     
+-------------------------------------------*/
+
+$sansSerifStack :                       'Montserrat', Helvetica, Arial,sans-serif;
+$SerifStack :                           Georgia, 'Times New Roman', serif;
+
+$fontWeightThin :                       100;
+$fontWeightExtraLight :                 200;
+$fontWeightLight :                      300;
+$fontWeightRegular :                    400;
+$fontWeightMedium :                     500;
+$fontWeightSemiBold :                   600;
+$fontWeightBold :                       700;
+$fontWeightExtraBold :                  800;
+$fontWeightBlack :                      900;
+
+
+
+$ms6:                                   5.2rem; // 52px display 3
+$ms5:                                   4.2rem; // 52px display 1
+$ms4:                                   2.8rem; // 28px h1
+$ms3:                                   2.4rem; // 24px h2
+$ms2:                                   2rem; // 20px h3
+$ms1:                                   1.8rem; // 18px p main
+$ms0:                                   1.6rem; // 16px p
+$ms-1:                                  1.4rem; // 14px s
+$ms-2:                                  1.2rem; // 12px xs
+$ms-3:                                  1rem; // 10px xxs
+
+
+/*-------------------------------------------    
+    Definitions: Media     
+-------------------------------------------*/

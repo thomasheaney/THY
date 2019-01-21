@@ -1,0 +1,850 @@
+/*
+*************************************************
+
+DANMALL.ME
+Mixins
+
+Created by the epic SuperFriendly team.
+http://superfriend.ly/
+
+*************************************************
+*/
+
+/*-------------------------------------------    
+    Text
+-------------------------------------------*/
+
+
+@mixin u-text--xs {
+	font-size: $xs + px;
+	font-size: $xs/10 + rem;
+}
+
+@mixin u-text--s {
+	font-size: $s + px;
+	font-size: $s/10 + rem;
+}
+
+@mixin u-text--m {
+	font-size: $m + px;
+	font-size: $m/10 + rem;
+}
+
+@mixin u-text--l {
+	font-size: $l + px;
+	font-size: $l/10 + rem;
+}
+
+@mixin u-text--xl {
+	font-size: $xl + px;
+	font-size: $xl/10 + rem;
+}
+
+@mixin u-text--xxl {
+	font-size: $xxl + px;
+	font-size: $xxl/10 + rem;
+}
+
+@mixin u-text--10 {
+	font-size: 10px;
+	font-size: 1rem;
+}
+
+@mixin u-text--12 {
+	font-size: 12px;
+	font-size: 1.2rem;
+}
+
+@mixin u-text--14 {
+	font-size: 14px;
+	font-size: 1.4rem;
+}
+
+@mixin u-text--20 {
+	font-size: 20px;
+	font-size: 2rem;
+}
+
+
+// leading
+
+@mixin u-leading--xs {
+	line-height: 1;
+}
+
+@mixin u-leading--s {
+	line-height: 1.2;
+}
+
+@mixin u-leading--m {
+	line-height: 1.4;
+}
+
+@mixin u-leading--l {
+	line-height: 1.6;
+}
+
+@mixin u-leading--xl {
+	line-height: 1.8;
+}
+
+@mixin u-leading--xxl {
+	line-height: 2;
+}
+
+
+// font style
+/*
+@mixin u-font--sans {
+	font-family: $sansSerifStack;
+	font-family: $wfSansSerifStack;
+}
+
+@mixin u-font--serif {
+	font-family: $serifStack;
+	font-family: $wfSerifStack;
+}
+*/
+
+
+// font weight
+
+@mixin u-font--bold {
+	font-weight: bold;
+}
+
+@mixin u-font--normal {
+	font-weight: normal;
+}
+
+@mixin u-font--italic {
+	font-style: italic;
+}
+
+@mixin u-font--BreveItalic {
+	font-family: "BreveNews-BookItalic";
+	font-style: normal;
+}
+
+@mixin u-fontStyle--italic {
+	font-style: italic;
+}
+
+@mixin u-fontStyle--BreveItalic {
+	font-family: "BreveNews-BookItalic";
+	font-style: normal;
+}
+
+@mixin u-fontStyle--normal {
+	font-style: normal;
+}
+
+
+
+// bullets
+
+@mixin u-bullets {
+	list-style: disc;	
+}
+
+@mixin u-bullets--none {
+	list-style: none;	
+}
+
+
+// other text styles
+
+@mixin u-uppercase {
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+}
+
+@mixin u-letterspace--in {
+	letter-spacing: -1px;
+}
+
+
+
+/*-------------------------------------------    
+    Alignments
+-------------------------------------------*/
+
+@mixin u-align--left {
+	text-align: left;
+}
+
+@mixin u-align--right {
+	text-align: right;
+}
+
+@mixin u-align--center {
+	text-align: center;
+}
+
+
+
+
+/*-------------------------------------------    
+    Margins     
+-------------------------------------------*/
+
+// margin shorthand
+
+@mixin u-margin--0 {
+	margin: 0;
+}
+
+@mixin u-margin--xxs {
+	margin: $xxs + px;
+}
+
+@mixin u-margin--xs {
+	margin: $xs + px;
+}
+
+@mixin u-margin--s {
+	margin: $s + px;
+}
+
+@mixin u-margin--m {
+	margin: $m + px;
+}
+
+@mixin u-margin--l {
+	margin: $l + px;
+}
+
+@mixin u-margin--xl {
+	margin: $xl + px;
+}
+
+@mixin u-margin--xxl {
+	margin: $xxl + px;
+}
+
+
+
+// marginTop
+
+@mixin u-marginTop--0 {
+	margin-top: 0;
+}
+
+@mixin u-marginTop--xs {
+	margin-top: $xs + px;
+}
+
+@mixin u-marginTop--s {
+	margin-top: $s + px;
+}
+
+@mixin u-marginTop--m {
+	margin-top: $m + px;
+}
+
+@mixin u-marginTop--l {
+	margin-top: $l + px;
+}
+
+@mixin u-marginTop--xl {
+	margin-top: $xl + px;
+}
+
+@mixin u-marginTop--xxl {
+	margin-top: $xxl + px;
+}
+
+
+// marginRight
+
+@mixin u-marginRight--0 {
+	margin-right: 0;
+}
+
+@mixin u-marginRight--xs {
+	margin-right: $xs + px;
+}
+
+@mixin u-marginRight--s {
+	margin-right: $s + px;
+}
+
+@mixin u-marginRight--m {
+	margin-right: $m + px;
+}
+
+@mixin u-marginRight--l {
+	margin-right: $l + px;
+}
+
+@mixin u-marginRight--xl {
+	margin-right: $xl + px;
+}
+
+@mixin u-marginRight--xxl {
+	margin-right: $xxl + px;
+}
+
+
+// marginBottom
+
+@mixin u-marginBottom--0 {
+	margin-bottom: 0;
+}
+
+@mixin u-marginBottom--xs {
+	margin-bottom: $xs + px;
+}
+
+@mixin u-marginBottom--s {
+	margin-bottom: $s + px;
+}
+
+@mixin u-marginBottom--m {
+	margin-bottom: $m + px;
+}
+
+@mixin u-marginBottom--l {
+	margin-bottom: $l + px;
+}
+
+@mixin u-marginBottom--xl {
+	margin-bottom: $xl + px;
+}
+
+@mixin u-marginBottom--xxl {
+	margin-bottom: $xxl + px;
+}
+
+
+
+// marginLeft
+
+@mixin u-marginLeft--0 {
+	margin-left: 0;
+}
+
+@mixin u-marginLeft--xs {
+	margin-left: $xs + px;
+}
+
+@mixin u-marginLeft--s {
+	margin-left: $s + px;
+}
+
+@mixin u-marginLeft--m {
+	margin-left: $m + px;
+}
+
+@mixin u-marginLeft--l {
+	margin-left: $l + px;
+}
+
+@mixin u-marginLeft--xl {
+	margin-left: $xl + px;
+}
+
+@mixin u-marginLeft--xxl {
+	margin-left: $xxl + px;
+}
+
+
+
+
+/*-------------------------------------------    
+    Paddings     
+-------------------------------------------*/
+
+// padding shorthand
+
+@mixin u-padding--0 {
+	padding: 0;
+}
+
+@mixin u-padding--xxs {
+	padding: $xxs + px;
+}
+
+@mixin u-padding--xs {
+	padding: $xs + px;
+}
+
+@mixin u-padding--xsPlus {
+	padding: $xsPlus + px;
+}
+
+@mixin u-padding--s {
+	padding: $s + px;
+}
+
+@mixin u-padding--m {
+	padding: $m + px;
+}
+
+@mixin u-padding--l {
+	padding: $l + px;
+}
+
+@mixin u-padding--xl {
+	padding: $xl + px;
+}
+
+@mixin u-padding--xxl {
+	padding: $xxl + px;
+}
+
+@mixin u-padding--xxxl {
+    padding: $xxxl + px;
+}
+
+
+
+// paddingTop
+
+@mixin u-paddingTop--0 {
+	padding-top: 0;
+}
+
+@mixin u-paddingTop--xxs {
+	padding-top: $xxs + px;
+}
+
+@mixin u-paddingTop--xs {
+	padding-top: $xs + px;
+}
+
+@mixin u-paddingTop--xsPlus {
+	padding-top: $xsPlus + px;
+}
+
+@mixin u-paddingTop--s {
+	padding-top: $s + px;
+}
+
+@mixin u-paddingTop--m {
+	padding-top: $m + px;
+}
+
+@mixin u-paddingTop--l {
+	padding-top: $l + px;
+}
+
+@mixin u-paddingTop--xl {
+	padding-top: $xl + px;
+}
+
+@mixin u-paddingTop--xxl {
+	padding-top: $xxl + px;
+}
+
+@mixin u-paddingTop--xxxl {
+    padding-top: $xxxl + px;
+}
+
+// paddingRight
+
+@mixin u-paddingRight--0 {
+	padding-right: 0;
+}
+
+@mixin u-paddingRight--xxs {
+	padding-right: $xxs + px;
+}
+
+@mixin u-paddingRight--xs {
+	padding-right: $xs + px;
+}
+
+@mixin u-paddingRight--xsPlus {
+	padding-right: $xsPlus + px;
+}
+@mixin u-paddingRight--s {
+	padding-right: $s + px;
+}
+
+@mixin u-paddingRight--m {
+	padding-right: $m + px;
+}
+
+@mixin u-paddingRight--l {
+	padding-right: $l + px;
+}
+
+@mixin u-paddingRight--xl {
+	padding-right: $xl + px;
+}
+
+@mixin u-paddingRight--xxl {
+	padding-right: $xxl + px;
+}
+
+@mixin u-paddingRight--xxxl {
+    padding-right: $xxxl + px;
+}
+
+// paddingBottom
+
+@mixin u-paddingBottom--0 {
+	padding-bottom: 0;
+}
+
+@mixin u-paddingBottom--xxs {
+	padding-bottom: $xxs + px;
+}
+
+@mixin u-paddingBottom--xs {
+	padding-bottom: $xs + px;
+}
+
+@mixin u-paddingBottom--xsPlus {
+	padding-bottom: $xsPlus + px;
+}
+
+@mixin u-paddingBottom--s {
+	padding-bottom: $s + px;
+}
+
+@mixin u-paddingBottom--m {
+	padding-bottom: $m + px;
+}
+
+@mixin u-paddingBottom--l {
+	padding-bottom: $l + px;
+}
+
+@mixin u-paddingBottom--xl {
+	padding-bottom: $xl + px;
+}
+
+@mixin u-paddingBottom--xxl {
+	padding-bottom: $xxl + px;
+}
+@mixin u-paddingBottom--xxxl {
+    padding-bottom: $xxxl + px;
+}
+
+
+
+
+// paddingLeft
+
+@mixin u-paddingLeft--0 {
+	padding-left: 0;
+}
+
+@mixin u-paddingLeft--xxs {
+	padding-left: $xxs + px;
+}
+
+@mixin u-paddingLeft--xs {
+	padding-left: $xs + px;
+}
+
+@mixin u-paddingLeft--xsPlus {
+	padding-left: $xsPlus + px;
+}
+
+@mixin u-paddingLeft--s {
+	padding-left: $s + px;
+}
+
+@mixin u-paddingLeft--m {
+	padding-left: $m + px;
+}
+
+@mixin u-paddingLeft--l {
+	padding-left: $l + px;
+}
+
+@mixin u-paddingLeft--xl {
+	padding-left: $xl + px;
+}
+
+@mixin u-paddingLeft--xxl {
+	padding-left: $xxl + px;
+}
+
+@mixin u-paddingLeft--xxxl {
+    padding-left: $xxxl + px;
+}
+
+/*-------------------------------------------    
+    Indent     
+-------------------------------------------*/
+
+@mixin u-textIndent--0 {
+	text-indent: 0;
+}
+
+
+
+/*-------------------------------------------    
+    Display     
+-------------------------------------------*/
+
+@mixin u-hide {
+	display: none;
+}
+
+@mixin u-show {
+	display: block;
+}
+
+@mixin u-block {
+	display: block;
+}
+
+@mixin u-display--block {
+	display: block;
+}
+
+@mixin u-display--inlineBlock {
+	display: inline-block;
+}
+
+@mixin u-display--inline {
+	display: inline;
+}
+
+
+
+
+
+
+/*-------------------------------------------    
+    Positioning
+-------------------------------------------*/
+
+@mixin u-pos--absolute {
+	position: absolute;
+}
+
+@mixin u-pos--relative {
+	position: relative;
+}
+
+@mixin u-pos--static {
+	position: static;
+}
+
+@mixin u-pos--fixed {
+	position: fixed;
+}
+
+
+
+/*-------------------------------------------    
+    Moving
+-------------------------------------------*/
+
+@mixin u-move--offscreen {
+	@include u-pos--absolute;
+	@include u-show;
+	left: -99999px;
+}
+
+@mixin u-move--onscreen {
+	@include u-pos--absolute;
+	@include u-show;
+	left: 0;
+}
+
+
+/*-------------------------------------------    
+    Floating & Clearing
+-------------------------------------------*/
+
+@mixin u-float--left {
+	float: left;
+}
+
+@mixin u-float--right {
+	float: right;
+}
+
+@mixin u-float--none {
+	float: none;
+}
+
+@mixin u-clear--left {
+	clear: left;
+}
+
+@mixin u-clear--right {
+	clear: right;
+}
+
+@mixin u-clear--both {
+	clear: both;
+}
+
+
+/* Easy Clearing - http://www.positioniseverything.net/easyclearing.html */ 
+/* 
+@mixin u-clearfix:after {
+	content: "."; 
+	display: block; 
+	height: 0; 
+	clear: both; 
+	visibility: hidden;
+}
+*/
+
+
+/*-------------------------------------------    
+    Phark
+-------------------------------------------*/
+
+@mixin u-phark {
+	display: block; 
+	text-indent: -9999px; 
+	background-position: 0 0; 
+	background-repeat: no-repeat; 
+	background-color: transparent;
+}
+
+
+/*-------------------------------------------    
+    Backgrounds
+-------------------------------------------*/
+
+@mixin u-bg--none {
+	background: none;
+}
+
+
+
+/*-------------------------------------------    
+    Box Shadow
+-------------------------------------------*/
+
+@mixin u-boxShadow--none {
+	box-shadow: none;
+}
+
+
+
+/*-------------------------------------------    
+    Widths
+-------------------------------------------*/
+
+@mixin l-width--100 {
+	width: 100%;
+}
+
+@mixin l-width--75 {
+	width: 75%;
+}
+
+@mixin l-width--66 {
+	width: 66.66666666667%;
+}
+
+@mixin l-width--50 {
+	width: 50%;
+}
+
+@mixin l-width--33 {
+	width: 33.333333333333%;
+}
+
+@mixin l-width--25 {
+	width: 25%;
+}
+
+@mixin l-width--20 {
+	width: 20%;
+}
+
+@mixin l-maxWidth--1000 {
+	max-width: 1000px;
+}
+
+
+
+/*-------------------------------------------    
+    Columns
+-------------------------------------------*/
+
+@mixin l-col--100 {
+	@include u-float--left;
+	@include l-width--100;
+}
+
+@mixin l-col--75 {
+	@include u-float--left;
+	@include l-width--75;
+}
+
+@mixin l-col--66 {
+	@include u-float--left;
+	@include l-width--66;
+}
+
+@mixin l-col--50 {
+	@include u-float--left;
+	@include l-width--50;
+}
+
+@mixin l-col--33 {
+	@include u-float--left;
+	@include l-width--33;
+}
+
+@mixin l-col--25 {
+	@include u-float--left;
+	@include l-width--25;
+}
+
+@mixin l-col--20 {
+	@include u-float--left;
+	@include l-width--20;
+}
+
+/*-------------------------------------------    
+    Flex
+-------------------------------------------*/
+
+@mixin u-display--flex {
+	display: flex;
+}
+
+@mixin flex-col {
+	flex-direction : column;
+}
+
+@mixin flex-row {
+	flex-direction : row;
+}
+
+
+@mixin flex-v-center { align-items : center;}
+@mixin flex-v-end { align-items : flex-end;}
+@mixin flex-h-center { justify-content : center;}
+@mixin flex-h-left { justify-content : flex-start;}
+@mixin flex-h-between { justify-content : space-between;}
+@mixin flex-h-right { justify-content : flex-end;}
+
+
+
+
+
+//https://webaim.org/techniques/css/invisiblecontent/#techniques
+@mixin hidden {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/*-------------------------------------------    
+    display Patterns
+-------------------------------------------*/
+
+@function searchboxOffset() {
+   
+    @return  ($lineHeight + ($xs * 2)) *-1;
+}
+

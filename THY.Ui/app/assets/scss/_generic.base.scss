@@ -1,0 +1,43 @@
+/*-------------------------------------------    
+    Base     
+-------------------------------------------*/
+* { 
+	margin: 0; 
+	padding: 0; 
+}
+
+html { 
+	font-size: 62.5%; /* for rems */
+} 
+
+
+html { 
+  background: url(/assets/images/cdu-bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+/* Thanks, Paul Irish! https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+html {
+ 	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+ 	box-sizing: inherit;
+}
+
+body { 
+	font-size :							$ms0;
+	line-height :						$lineHeight;
+	//font-family :						$sansSerifStack;
+	color:                              $textColorDark; 
+    margin:                             0 auto;
+}
+
+img {max-width : 100%;}
+
+p { @include u-marginBottom--s;}
+

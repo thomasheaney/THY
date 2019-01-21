@@ -1,0 +1,9 @@
+{
+  "name": "thy.ui",
+  "version": "0.0.0",
+  "description": "THY.Ui",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  }
+}
