@@ -28,9 +28,31 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="app.js" />
+    <Content Include="app\assets\scss\styles.scss" />
+    <Content Include="app\assets\scss\_generic.base.scss" />
+    <Content Include="app\assets\scss\_generic.normalize.scss" />
+    <Content Include="app\assets\scss\_objects.display-patterns.scss" />
+    <Content Include="app\assets\scss\_objects.flex.scss" />
+    <Content Include="app\assets\scss\_objects.wrappers.scss" />
+    <Content Include="app\assets\scss\_settings.constants.scss" />
+    <Content Include="app\assets\scss\_tools.mixins.scss" />
+    <Content Include="app\assets\scss\_tools.utilities.scss" />
     <Content Include="package.json" />
-    <Content Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\" />
+    <Folder Include="app\assets\" />
+    <Folder Include="app\assets\images\" />
+    <Folder Include="app\assets\images\svg\" />
+    <Folder Include="app\assets\scss\" />
+    <Folder Include="dist\" />
+    <Folder Include="dist\assets\" />
+    <Folder Include="dist\assets\css\" />
+    <Folder Include="dist\assets\images\" />
+    <Folder Include="dist\assets\images\svg\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="gulpfile.js" />
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
