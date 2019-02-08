@@ -179,366 +179,53 @@ http://superfriend.ly/
 
 
 		/*-------------------------------------------    
-		    Margins     
+		    Margins and Paddings    
 		-------------------------------------------*/
 
-		// margin shorthand
-
-		&-margin--0 {
-			@include u-margin--0;
-		}
-
-		&-margin--xs {
-			@include u-margin--xs;
-		}
-
-		&-margin--s {
-			@include u-margin--s;
-		}
-
-		&-margin--m {
-			@include u-margin--m;
-		}
-
-		&-margin--l {
-			@include u-margin--l;
-		}
-
-		&-margin--xl {
-			@include u-margin--xl;
-		}
-
-		&-margin--xxl {
-			@include u-margin--xxl;
-		}
-
-
-
-		// marginTop
-
-		&-marginTop--0 {
-			@include u-marginTop--0;
-		}
-
-		&-marginTop--xs {
-			@include u-marginTop--xs;
-		}
-
-		&-marginTop--s {
-			@include u-marginTop--s;
-		}
-
-		&-marginTop--m {
-			@include u-marginTop--m;
-		}
-
-		&-marginTop--l {
-			@include u-marginTop--l;
-		}
-
-		&-marginTop--xl {
-			@include u-marginTop--xl;
-		}
-
-		&-marginTop--xxl {
-			@include u-marginTop--xxl;
-		}
-
-
-		// marginRight
-
-		&-marginRight--0 {
-			@include u-marginRight--0;
-		}
-
-		&-marginRight--xs {
-			@include u-marginRight--xs;
-		}
-
-		&-marginRight--s {
-			@include u-marginRight--s;
-		}
-
-		&-marginRight--m {
-			@include u-marginRight--m;
-		}
-
-		&-marginRight--l {
-			@include u-marginRight--l;
-		}
-
-		&-marginRight--xl {
-			@include u-marginRight--xl;
-		}
-
-		&-marginRight--xxl {
-			@include u-marginRight--xxl;
-		}
-
-
-		// marginBottom
-
-		&-marginBottom--0 {
-			@include u-marginBottom--0;
-		}
-
-		&-marginBottom--xs {
-			@include u-marginBottom--xs;
-		}
-
-		&-marginBottom--s {
-			@include u-marginBottom--s;
-		}
-
-		&-marginBottom--m {
-			@include u-marginBottom--m;
-		}
-
-		&-marginBottom--l {
-			@include u-marginBottom--l;
-		}
-
-		&-marginBottom--xl {
-			@include u-marginBottom--xl;
-		}
-
-		&-marginBottom--xxl {
-			@include u-marginBottom--xxl;
-		}
-
-
-
-		// marginLeft
-
-		&-marginLeft--0 {
-			@include u-marginLeft--0;
-		}
-
-		&-marginLeft--xs {
-			@include u-marginLeft--xs;
-		}
-
-		&-marginLeft--s {
-			@include u-marginLeft--s;
-		}
-
-		&-marginLeft--m {
-			@include u-marginLeft--m;
-		}
-
-		&-marginLeft--l {
-			@include u-marginLeft--l;
-		}
-
-		&-marginLeft--xl {
-			@include u-marginLeft--xl;
-		}
-
-		&-marginLeft--xxl {
-			@include u-marginLeft--xxl;
-		}
-
-
-
-		/*-------------------------------------------    
-		    Paddings     
-		-------------------------------------------*/
-
-		// padding shorthand
-
-		&-padding--0 {
-			@include u-padding--0;
-		}
-
-		&-padding--xxs {
-			@include u-padding--xxs;
-		}
-
-		&-padding--xs {
-			@include u-padding--xs;
-		}
-
-        &-padding--xsPlus {
-			@include u-padding--xsPlus;
-		}
-
-		&-padding--s {
-			@include u-padding--s;
-		}
-                
-		&-padding--m {
-			@include u-padding--m;
-		}
-
-		&-padding--l {
-			@include u-padding--l;
-		}
-
-		&-padding--xl {
-			@include u-padding--xl;
-		}
-
-		&-padding--xxl {
-			@include u-padding--xxl;
-		}
-
-
-
-		// paddingTop
-
-		&-paddingTop--0 {
-			@include u-paddingTop--0;
-		}
-
-		&-paddingTop--xxs {
-			@include u-paddingTop--xxs;
-		}
-
-		&-paddingTop--xs {
-			@include u-paddingTop--xs;
-		}
-
-        &-paddingTop--xsPlus {
-			@include u-paddingTop--xsPlus;
-		}
-
-		&-paddingTop--s {
-			@include u-paddingTop--s;
-		}
-        
-		&-paddingTop--m {
-			@include u-paddingTop--m;
-		}
-
-		&-paddingTop--l {
-			@include u-paddingTop--l;
-		}
-
-		&-paddingTop--xl {
-			@include u-paddingTop--xl;
-		}
-
-		&-paddingTop--xxl {
-			@include u-paddingTop--xxl;
-		}
-
-
-		// paddingRight
-
-		&-paddingRight--0 {
-			@include u-paddingRight--0;
-		}
-
-		&-paddingRight--xxs {
-			@include u-paddingRight--xxs;
-		}
-
-		&-paddingRight--xs {
-			@include u-paddingRight--xs;
-		}
-
-        &-paddingRight--xsPlus {
-			@include u-paddingRight--xsPlus;
-		}
-
-		&-paddingRight--s {
-			@include u-paddingRight--s;
-		}
-
-        &-paddingRight--m {
-			@include u-paddingRight--m;
-		}
-
-		&-paddingRight--l {
-			@include u-paddingRight--l;
-		}
-
-		&-paddingRight--xl {
-			@include u-paddingRight--xl;
-		}
-
-		&-paddingRight--xxl {
-			@include u-paddingRight--xxl;
-		}
-
-
-		// paddingBottom
-
-		&-paddingBottom--0 {
-			@include u-paddingBottom--0;
-		}
-
-		&-paddingBottom--xxs {
-			@include u-paddingBottom--xxs;
-		}
-
-		&-paddingBottom--xs {
-			@include u-paddingBottom--xs;
-		}
-
-        &-paddingBottom--xsPlus {
-			@include u-paddingBottom--xsPlus;
-		}
-
-		&-paddingBottom--s {
-			@include u-paddingBottom--s;
-		}
-
-        &-paddingBottom--m {
-			@include u-paddingBottom--m;
-		}
-
-		&-paddingBottom--l {
-			@include u-paddingBottom--l;
-		}
-
-		&-paddingBottom--xl {
-			@include u-paddingBottom--xl;
-		}
-
-		&-paddingBottom--xxl {
-			@include u-paddingBottom--xxl;
-		}
-
-
-
-		// paddingLeft
-
-		&-paddingLeft--0 {
-			@include u-paddingLeft--0;
-		}
-
-		&-paddingLeft--xxs {
-			@include u-paddingLeft--xxs;
-		}
-
-		&-paddingLeft--xs {
-			@include u-paddingLeft--xs;
-		}
-
-        &-paddingLeft--xsPlus {
-			@include u-paddingLeft--xsPlus;
-		}
-
-		&-paddingLeft--s {
-			@include u-paddingLeft--s;
-		}
-                
-		&-paddingLeft--m {
-			@include u-paddingLeft--m;
-		}
-
-		&-paddingLeft--l {
-			@include u-paddingLeft--l;
-		}
-
-		&-paddingLeft--xl {
-			@include u-paddingLeft--xl;
-		}
-
-		&-paddingLeft--xxl {
-			@include u-paddingLeft--xxl;
-		}
+		$properties:(
+    padding:padding,
+    margin:margin
+);
+
+$sizes: (
+    0:0,
+    xxxs:$xxxs,
+    xxs:$xxs,
+    xs:$xs,
+    xsPlus:$xsPlus,
+    s:$s,
+    m:$m,
+    l:$l,
+    xl:$xl,
+    xxl:$xxl,
+    xxxl:$xxxl
+);
+
+$positions: (
+    All:all,
+    Top:top,
+    Right:right,
+    Bottom:bottom,
+    Left:left);
+
+
+@each $properties-key, $properties-value in $properties {
+    @each $positions-key, $positions-value in $positions {
+        @each $sizes-key, $sizes-value in $sizes {
+
+            @if $positions-key == All {
+                &-#{$properties-key}--#{$sizes-key} {
+                #{$properties-value} : $sizes-value + px;
+                }
+            }
+            @else {
+                &-#{$properties-key}#{$positions-key}--#{$sizes-key} {
+               #{$properties-value}-#{$positions-value}  : $sizes-value + px;
+                }
+            }
+        }
+    }
+}
 
 
 

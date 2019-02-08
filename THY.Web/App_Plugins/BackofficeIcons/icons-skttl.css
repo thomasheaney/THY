@@ -1,0 +1,27 @@
+@font-face {
+    font - family: "skttl";
+    src: url('/App_Plugins/BackofficeIcons/skttl.eot');
+    src: url('/App_Plugins/BackofficeIcons/skttl.eot?#iefix') format('eot'),
+        url('/App_Plugins/BackofficeIcons/skttl.woff2') format('woff2'),
+            url('/App_Plugins/BackofficeIcons/skttl.woff') format('woff'),
+                url('/App_Plugins/BackofficeIcons/skttl.ttf') format('truetype'),
+                    url('/App_Plugins/BackofficeIcons/skttl.svg#skttl') format('svg');
+}
+
+[class^= "icon-skttl"],
+    [class*= " icon-skttl"] {
+    font - family: "skttl";
+    -webkit - font - smoothing: antialiased;
+    -moz - osx - font - smoothing: grayscale;
+    font - style: normal;
+    font - variant: normal;
+    font - weight: normal;
+    /* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
+    text - decoration: none;
+    text - transform: none;
+}
+
+
+.icon-skttl -h1: before {
+        content: "\E001";
+    }

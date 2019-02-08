@@ -1,0 +1,98 @@
+﻿@model BlogSearchResults
+@using THY.Web.Models
+@using Humanizer
+@using X.PagedList.Mvc;
+@using X.PagedList;
+
+@{
+    if (!string.IsNullOrEmpty(Model.HeadingText))
+    {
+        <h2 class="c-post-listing--page-heading">@Model.HeadingText @Model.SearchString</h2>
+    }
+
+    if (Model.Results.Count() > 0)
+    {
+        foreach (var article in Model.Results)
+        {
+            @RenderBlogPreview(article)
+        }
+    }
+    else
+    {
+        @: No Results
+    }
+}
+
+@RenderPaging(Model.Results)
+
+
+
+@helper RenderBlogPreview(BlogPreview item)
+{
+                    /**/
+    <div class="c-post-listing--item">
+        <span class="c-post-listing--date">@item.PublishedDate.ToOrdinalWords()</span>
+        <h3 class="c-post-listing--heading"><a href="@item.LinkUrl">@item.Name</a></h3>
+        <div class="o-flex o-flex-wrap o-flex--v-top o-flex--h-left">
+            
+            <p class="c-post-listing--summary">
+                @{
+                    if (!string.IsNullOrEmpty(item.ImageUrl))
+                    {
+                        <a href="@item.LinkUrl"><img src="@item.ImageUrl" class="c-post-listing--image" alt="@item.Name"></a>
+                    }
+                }
+                @item.Introduction
+            </p>
+            <a href="@item.LinkUrl" class="c-post-listing--more-link">Read More</a>
+
+        </div>
+
+
+
+
+    </div>
+}
+
+@helper RenderPaging(IPagedList results)
+{
+                    
+
+
+                    var hasOlderPages = results.PageCount > 1 && results.PageNumber != results.PageCount ? true : false;
+                    var hasNewerPages = results.PageCount > 1 && results.PageNumber > 1 ? true : false;
+
+                    if (hasOlderPages || hasNewerPages)
+                    {
+                        <nav class="c-paging o-flex">
+
+                            <span class="c-paging--older">
+                                @{
+                                    if (hasOlderPages)
+                                    {
+                                        var nextPage = results.PageNumber + 1;
+
+                                        <a href="@Model.UrlSegment/page/@nextPage/">Older Pages</a>
+                                    }
+                                }
+                            </span>
+
+                            <span class="c-paging--newer">
+
+                                @{
+                                    if (hasNewerPages)
+                                    {
+                                        var prevPage = results.PageNumber - 1;
+                                        var url = prevPage == 1 ? Model.UrlSegment + "/" : Model.UrlSegment + "/page/" + prevPage + "/";
+
+                                        <a href="@url">Newer Pages</a>
+                                    }
+                                }
+                            </span>
+
+                        </nav>
+                    }
+
+
+
+}

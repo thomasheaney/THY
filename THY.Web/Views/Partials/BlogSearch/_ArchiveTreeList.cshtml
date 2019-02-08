@@ -1,0 +1,60 @@
+﻿@model List<ArchiveYear>
+@using THY.Web.Models
+@using THY.Web.Helpers
+
+@{ 
+    PresentationHelper presentationHelper = new PresentationHelper();
+}
+
+
+<div class="c-archive-list c-archive-list__tree">
+    <h4 class="c-sidebar--heading c-archive-list--heading">Archive</h4>
+    <ul class="c-archive-list--items">
+        @foreach (var item in Model)
+        {
+
+        <li class="c-archive-list--year">
+            
+            <span class="c-archive-list--label  js-label">
+                <span class="o-icon c-archive-list--year-icon">@Html.Raw(presentationHelper.GetSvgFile("archives-arrow"))</span>
+                @item.Year <span class="dp-fade-text">(@item.ArticleCount)</span>
+            </span>
+            @{
+                <ul class="c-archive-list--months">
+                    @foreach (var month in item.Months)
+                    {
+                        <li class="c-archive-list--month">
+                            <span class="c-archive-list--label  js-label">
+                                <span class="o-icon c-archive-list--month-icon">@Html.Raw(presentationHelper.GetSvgFile("archives-arrow"))</span>
+                                @month.DisplayText <span class="dp-fade-text">(@month.ArticleCount)</span>
+                            </span>
+                            <ul class="c-archive-list--links">
+                                @foreach (var article in month.ArticleLinks)
+                                {
+                                    <li class="c-archive-list--link"><a href="@article.Value">@article.Key</a></li>
+                                }
+
+                            </ul>
+
+                        </li>
+                    }
+                </ul>
+            }
+        </li>
+        }
+    </ul>
+</div>
+
+
+<script>
+
+    var elem = document.querySelectorAll('.js-label');
+
+    // Native
+    [].forEach.call(elem, function (el) {
+        el.addEventListener('click', function () {
+            el.parentElement.classList.toggle('is-open');
+        }, false);
+    });
+
+</script>

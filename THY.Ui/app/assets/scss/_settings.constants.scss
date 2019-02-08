@@ -2,6 +2,11 @@
     Definitions: Colors     
 -------------------------------------------*/
 
+$brandColor1 :                          #ba0d37;
+$brandColor2 :                          #DDD8F1;
+$brandColor :                           #ba0d37;
+$brandColor8 :                          #685F8F;
+
 $siteHeaderBgColor :                    #5586af;
 $siteFooterBgColor :                    #5586af;
 
@@ -29,6 +34,10 @@ $hoverHighlightColor :                  #F2F0FA;
 
 $teaserHoverColor :                     #FBF4EC;
 
+$buttonBgColor :                        $brandColor2;
+$buttonHighlightLightColor :            #F2F0FA;
+$buttonHighlightDarkColor :             #CDC6EA;
+
 $successColor :                         #69DD95;
 $successColorLight :                    #B4EECA;
 $warningColor :                         #F5C85C;
@@ -39,13 +48,16 @@ $errorColorLight :                      #F8B0BA;
 $offerTeaserBgColor :                   #F8f8F8;
 $formInputColor :                       #fbfbfb;
 
+$tagColor :                             #8f9f8f;
+
 /*-------------------------------------------    
     Definitions: Units     
 -------------------------------------------*/
 
 // https://spec.fm/specifics/8-pt-grid
 
-$spacing :		                        8;				
+$spacing :		                        8;		
+$xxxs :                                 $spacing / 4;
 $xxs :                                  $spacing / 2;
 $xs :                                   $spacing;
 $xsPlus :                               $spacing * 1.5;
@@ -59,14 +71,16 @@ $xxxl:                                  $spacing * 8;
 
 
 
-$lineHeight :                           24px;
+$lineHeight :                           28px;
 $lineHeightSmall:                       $lineHeight * 0.75;
 $lineHeightLarge:                       $lineHeight * 1.25;
+
 $sectionSpacingSmall :                  $lineHeight / 2 ;
 $sectionSpacing :                       $lineHeight ;
 $sectionSpacingLarge :                  $lineHeight * 2;
 $sectionSpacingVeryLarge :              $lineHeight * 3;
 $sectionSpacingExtraLarge :             $lineHeight * 4;
+
 /*-------------------------------------------    
     Definitions: Fonts     
 -------------------------------------------*/
@@ -87,7 +101,7 @@ $fontWeightBlack :                      900;
 
 
 $ms6:                                   5.2rem; // 52px display 3
-$ms5:                                   4.2rem; // 52px display 1
+$ms5:                                   4.2rem; // 42px display 1
 $ms4:                                   2.8rem; // 28px h1
 $ms3:                                   2.4rem; // 24px h2
 $ms2:                                   2rem; // 20px h3
@@ -97,7 +111,57 @@ $ms-1:                                  1.4rem; // 14px s
 $ms-2:                                  1.2rem; // 12px xs
 $ms-3:                                  1rem; // 10px xxs
 
+$lh6:                                   7.2rem;
+$lh5:                                   4.8rem;
+$lh4:                                   4.8rem;
+$lh3:                                   4.8rem;
+$lh2:                                   2.4rem;
+$lh1:                                   2.4rem;
+$lh0:                                   2.4rem;
 
 /*-------------------------------------------    
     Definitions: Media     
 -------------------------------------------*/
+
+$sm-viewport:                       320px;
+$smplus-viewport:                   375px;
+$plus-portrait-viewport:            414px;
+$ipn5-landscape-viewport:           568px;
+$md-viewport:                       640px;
+$plus-landscape-viewport:           736px;
+$desktop:                           770px; 
+$lg-viewport:                       992px;  //960px;
+$full-width-viewport:               1200px;
+
+
+
+
+$primary900 : #224261;
+$primary800 : #346595;
+$primary700 : #3A74AD;
+$primary600 : #408AD1;
+$primary500 : #5999D7;
+$primary400 : #80BAF2;
+$primary300 : #B2D7FA;
+$primary200 : #CDE7FF;
+$primary100 : #F4F9FF;
+
+$highlight900 : #4D2209;
+$highlight800 : #753E1E;
+$highlight700 : #8E522F;
+$highlight600 : #A55F36;
+$highlight500 : #EA8447;
+$highlight400 : #EFA375;
+$highlight300 : #F4C1A2;
+$highlight200 : #FAE1D2;
+$highlight100 : #FEF9F7;
+
+$neutral900 : #3F474F;
+$neutral800 : #4B525A;
+$neutral700 : #696F74;
+$neutral600 : #798086;
+$neutral500 : #93989D;
+$neutral400 : #ABB3BB;
+$neutral300 : #C4CCD5;
+$neutral200 : #E4E8ED;
+$neutral100 : #F8F9FB;

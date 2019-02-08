@@ -1,0 +1,26 @@
+﻿.c-content {
+
+    font-size:                          $ms0;
+    color :                             $neutral800;
+
+    @media screen and (min-width: $md-viewport) {
+
+        font-size:                      $ms2;
+        line-height:                    $lineHeight;
+    }
+
+    &--wrapper {
+        
+        max-width:                      990px;
+        margin-top:                     0;
+    }
+
+    
+
+
+    p,ul,ol { padding-bottom: $lineHeight;}
+     
+
+}
+
+

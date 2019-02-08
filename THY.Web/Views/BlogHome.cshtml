@@ -1,0 +1,24 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.BlogHome>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = "WebBase.cshtml";
+}
+
+<div class="c-content o-content--wrapper u-clearfix">
+
+    <div class="c-post-listing c-content--main">
+        @{ Html.RenderAction("RenderPostList", "BlogHome", new { numberOfItems = 6 });}
+    </div>
+
+    <aside class="c-content--sidebar c-sidebar">
+        @{ Html.RenderAction("RenderTagCloud", "BlogSearch");}
+
+        @{ Html.RenderAction("RenderCategoryList", "BlogSearch");}
+
+        @*@{ Html.RenderAction("RenderArchiveList", "BlogSearch", new { asTree = true });}*@
+
+        @{ Html.RenderAction("RenderArchiveList", "BlogSearch");}
+
+    </aside>
+
+</div>

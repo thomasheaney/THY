@@ -1,0 +1,15 @@
+﻿<header class="c-site-header o-content--wrapper">
+    <div class="o-wrapper o-flex o-flex--v-center ">
+        <a href="/" class="c-site-header--logo" ><img src="/assets/images/logo.png" alt="logo" /></a>
+        <nav class="c-main-navigation c-site-header--navigation o-flex o-flex--v-center o-flex--h-left">
+            <a href="/blog" class="c-main-navigation--item" title="blog">Blog</a>
+            <a href="/about" class="c-main-navigation--item" title="about">About</a>
+        </nav>
+
+        <div class="c-site-header--contact">
+            <a href="http://www.twitter.com" class="c-site-header--icon">@Html.Raw(System.IO.File.ReadAllText(Server.MapPath("~/assets/images/svg/twitter.svg")))</a>
+            <a href="/feed" class="c-site-header--icon">@Html.Raw(System.IO.File.ReadAllText(Server.MapPath("~/assets/images/svg/rss.svg")))</a>
+        </div>
+        
+    </div>
+</header>

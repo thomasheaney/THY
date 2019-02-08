@@ -1,0 +1,54 @@
+﻿@model THY.Web.Models.RSSFeed
+
+@{
+    Layout = null;
+    Response.AddHeader("Content-Type", "text/xml");
+
+    //const string DATE_FORMAT = "ddd, dd MMM yyyy hh:mm:ss zzz";
+    const string FEED_TITLE = "Blog title";
+    const string FEED_DESCRIPTION = "Blog Title | Blog Description";
+    const string UPDATE_PERIOD = "daily";
+    const int UPDATE_FREQUENCY = 1;
+    const string LANGUAGE = "en-US";
+    
+    const string DATE_FORMAT = "ddd, dd MMM yyyy hh:mm:ss zzz";
+
+
+}
+
+<rss version="2.0"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+     xmlns:slash="http://purl.org/rss/1.0/modules/slash/">
+
+    <channel>
+        <title>@FEED_TITLE</title>
+        <atom:link href="@Model.CurrentPageUrl" rel="self" type="application/rss+xml" />
+        <link>@Model.CurrentPageUrl</link>
+        <description>@FEED_DESCRIPTION</description>
+        <lastBuildDate>@Model.LastBuildDate</lastBuildDate>
+        <language>@LANGUAGE</language>
+        <sy:updatePeriod>@UPDATE_PERIOD</sy:updatePeriod>
+        <sy:updateFrequency>@UPDATE_FREQUENCY</sy:updateFrequency>
+        @foreach (var item in Model.FeedItems)
+        {
+            
+           @:<item>
+                <title>@item.Title</title>
+                <link>@item.Link@:</link>
+                <pubDate>@item.PublishedDate</pubDate>
+                <dc:creator><![CDATA[@item.Author]]></dc:creator>
+            foreach (var category in item.CategoryList)
+            {
+                <category><![CDATA[@category]]></category>
+            }
+                
+                <guid isPermaLink="false">@item.PermaLink</guid>
+                <description><![CDATA[@item.ArticleDescription]]></description>
+           @:</item>
+        }
+    </channel>
+</rss>

@@ -1,0 +1,16 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.NotFoundPage>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = "WebBase.cshtml";
+}
+
+
+
+<div class="c-content o-content--wrapper u-clearfix">
+
+    <div class=" c-content--main">
+        @Umbraco.Field("title")
+        @Umbraco.Field("content")
+    </div>
+
+</div>

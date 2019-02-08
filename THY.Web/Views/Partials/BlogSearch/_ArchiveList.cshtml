@@ -1,0 +1,27 @@
+﻿@model List<ArchiveYear>
+@using THY.Web.Models
+
+<div class="c-archive-list">
+    <h4 class="c-sidebar--heading c-archive-list--heading">Archive</h4>
+    <ul class="c-archive-list--items">
+        @foreach (var item in Model)
+        {
+
+
+
+            <ul>
+                @foreach (var month in item.Months)
+                {
+                    <li class="c-archive-list--month c-archive-list--link">
+                        <a href="/blog/@item.Year/@month.Month.ToString("X2")">
+                            <span class="c-archive-list--label">@item.Year @month.DisplayText <span class="dp-fade-text">(@month.ArticleCount)</span></span>
+                        </a>
+
+                    </li>
+                }
+            </ul>
+
+
+        }
+    </ul>
+</div>

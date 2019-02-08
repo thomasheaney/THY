@@ -1,0 +1,32 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.TextPage>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+    Layout = "WebBase.cshtml";
+}
+
+@{
+    string imageUrl = Model.Content.HasValue("masthead") ? Url.GetCropUrl(Model.Content, "masthead", "Masthead").ToString() : "";
+
+}
+
+<article class="c-content c-post o-content--wrapper">
+
+    <header class="c-post--header">
+        @if (!string.IsNullOrEmpty(imageUrl))
+        {
+            <img src="@imageUrl" class="c-post--masthead" />
+        }
+        <h1 class="c-post--heading">@Model.Content.Name</h1>
+
+
+
+
+
+    </header>
+    <main class="c-post--content">
+
+        @Html.GetGridHtml(Model.Content, "gridEditor")
+    </main>
+    
+
+</article>

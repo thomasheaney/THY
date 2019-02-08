@@ -81,8 +81,6 @@
         li { @include u-marginBottom--xs;}
      }
 
-     
-
      &-call {
          @include u-marginTop--m;
          display : block;
@@ -102,6 +100,27 @@
              
          }
      }
+
+     &-heading {
+         &__level-page { font-weight:                    $fontWeightRegular;}
+         &__level-2 { 
+         @include u-padding(b,$s);
+            font-size:                      $ms3;
+            line-height:                    $lh3;
+            color :                         $primary900;
+            font-weight:                    $fontWeightMedium;
+         }
+
+     }
+
+     &-external-link {
+         @include u-padding(lr,$xs);
+         text-decoration :               none;
+        color :                         $primary500;
+        font-weight :                   $fontWeightMedium;
+        background-color :              $primary100;
+     }
+
 }
 
 

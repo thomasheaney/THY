@@ -1,0 +1,35 @@
+﻿@model SearchResultsViewModel
+@using THY.Web.ViewModels
+
+@using Humanizer
+@using X.PagedList.Mvc;
+@using X.PagedList;
+
+<div class="c-content o-content--wrapper u-clearfix">
+
+    <div class="c-post-listing c-content--main">
+        @{Html.RenderPartial("BlogSearch/_SearchResults", Model.Results);}
+    </div>
+
+    <aside class="c-content--sidebar c-sidebar">
+
+        @*<form action="/blog/search" method="GET">
+            <p>
+                Find by name: @Html.TextBox("blogSearchString")
+                <input type="submit" value="Search" />
+            </p>
+        </form>*@
+
+
+
+        @{ Html.RenderAction("RenderTagCloud", "BlogSearch");}
+
+        @{ Html.RenderAction("RenderCategoryList", "BlogSearch");}
+
+        @{ Html.RenderAction("RenderArchiveList", "BlogSearch");}
+
+    </aside>
+
+
+</div>
+

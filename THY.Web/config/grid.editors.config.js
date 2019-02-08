@@ -30,7 +30,27 @@
         "icon": "icon-coin",
         "config": {
             "style": "font-size: 36px; line-height: 45px; font-weight: bold",
-            "markup": "<h1>#value#</h1>"
+            "markup": '<h1 class="c-content--heading dp - heading__level - 2">#value#</h1>'
+        }
+    },
+    {
+        "name": "Headline 2",
+        "alias": "headline2",
+        "view": "textstring",
+        "icon": "icon-coin",
+        "config": {
+            "style": "font-size: 28px; line-height: 36px; font-weight: bold",
+            "markup": '<h2 class="c-content--heading dp-heading__level-2">#value#</h2>'
+        }
+    },
+    {
+        "name": "Headline 3",
+        "alias": "headline3",
+        "view": "textstring",
+        "icon": "icon-coin",
+        "config": {
+            "style": "font-size: 22px; line-height: 36px; font-weight: bold",
+            "markup": '<h3 class="c-content--heading dp-heading__level-3">#value#</h3>'
         }
     },
     {

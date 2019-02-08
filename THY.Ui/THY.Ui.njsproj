@@ -28,7 +28,19 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="app\assets\backofficeicons\h1.svg" />
+    <Content Include="app\assets\images\logo.png" />
+    <Content Include="app\assets\images\svg\archives-arrow.svg" />
+    <Content Include="app\assets\images\svg\rss.svg" />
+    <Content Include="app\assets\images\svg\twitter.svg" />
     <Content Include="app\assets\scss\styles.scss" />
+    <Content Include="app\assets\scss\_components.content.scss" />
+    <Content Include="app\assets\scss\_components.navigation.scss" />
+    <Content Include="app\assets\scss\_components.post-listing.scss" />
+    <Content Include="app\assets\scss\_components.post.scss" />
+    <Content Include="app\assets\scss\_components.sidebar.scss" />
+    <Content Include="app\assets\scss\_components.site-footer.scss" />
+    <Content Include="app\assets\scss\_components.site-header.scss" />
     <Content Include="app\assets\scss\_generic.base.scss" />
     <Content Include="app\assets\scss\_generic.normalize.scss" />
     <Content Include="app\assets\scss\_objects.display-patterns.scss" />
@@ -42,6 +54,7 @@
   <ItemGroup>
     <Folder Include="app\" />
     <Folder Include="app\assets\" />
+    <Folder Include="app\assets\backofficeicons\" />
     <Folder Include="app\assets\images\" />
     <Folder Include="app\assets\images\svg\" />
     <Folder Include="app\assets\scss\" />
@@ -52,6 +65,9 @@
     <Folder Include="dist\assets\images\svg\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="app\assets\backofficeicons\template.css">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="gulpfile.js" />
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->

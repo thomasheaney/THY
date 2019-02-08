@@ -123,12 +123,22 @@ gulp.task('styles', function () {
   */
 gulp.task('images', function () {
     gulp.src(imagesSRC)
-        .pipe(imagemin({
-            progressive: true,
-            optimizationLevel: 3, // 0-7 low-high
-            interlaced: true,
-            svgoPlugins: [{ removeViewBox: true }]
-        }))
+        .pipe(imagemin([
+            imagemin.gifsicle({ interlaced: true }),
+            imagemin.jpegtran({ progressive: true }),
+            imagemin.optipng({ optimizationLevel: 5 }),
+            imagemin.svgo({
+                plugins: [
+                    { removeViewBox: true },
+                    { cleanupIDs: false },
+                    {
+                        removeAttrs: {
+                            attrs: ["xmlns"]
+                        }
+                    }
+                ]
+            })
+        ]))
         .pipe(gulp.dest(imagesDestination))
         .pipe(gulp.dest(imagesWebDestination));
     

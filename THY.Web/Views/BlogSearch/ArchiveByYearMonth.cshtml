@@ -1,0 +1,21 @@
+﻿@model SearchResultsViewModel
+@using THY.Web.ViewModels
+@using Humanizer
+
+<div class="c-content o-content--wrapper u-clearfix">
+
+    <div class="c-post-listing c-content--main">
+        @{Html.RenderPartial("BlogSearch/_SearchResults", Model.Results); }
+    </div>
+
+    <aside class="c-content--sidebar c-sidebar">
+        @{ Html.RenderAction("RenderTagCloud", "BlogSearch");}
+
+        @{ Html.RenderAction("RenderCategoryList", "BlogSearch");}
+
+        @{ Html.RenderAction("RenderArchiveList", "BlogSearch");}
+
+    </aside>
+
+
+</div>

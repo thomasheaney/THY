@@ -163,6 +163,10 @@ http://superfriend.ly/
 	letter-spacing: -1px;
 }
 
+@mixin u-letterspace--out {
+	letter-spacing: 0.1em;
+}
+
 
 
 /*-------------------------------------------    
@@ -181,6 +185,44 @@ http://superfriend.ly/
 	text-align: center;
 }
 
+
+
+/*-------------------------------------------    
+    Margin and padding functions    
+-------------------------------------------*/
+
+
+@mixin u-margin($side,$size){
+
+    @if (str-index($side, 't')) {
+        margin-top: $size + px; 
+    };
+    @if (str-index($side, 'r')) {
+        margin-right: $size + px; 
+    };
+    @if (str-index($side, 'b')) {
+        margin-bottom: $size + px; 
+    };
+    @if (str-index($side, 'l')) {
+        margin-left: $size + px; 
+    };
+}
+
+@mixin u-padding($side,$size){
+
+    @if (str-index($side, 't')) {
+        padding-top: $size + px; 
+    };
+    @if (str-index($side, 'r')) {
+        padding-right: $size + px; 
+    };
+    @if (str-index($side, 'b')) {
+        padding-bottom: $size + px; 
+    };
+    @if (str-index($side, 'l')) {
+        padding-left: $size + px; 
+    }
+};
 
 
 
@@ -848,3 +890,24 @@ http://superfriend.ly/
     @return  ($lineHeight + ($xs * 2)) *-1;
 }
 
+
+
+
+@mixin testtypog($font-size,$line-height)
+{
+
+    font-size : $font-size;
+    line-height :1.3;
+    padding-bottom : (strip-unit($line-height) - (strip-unit($font-size) * 1.3)) * .6666 + rem;
+    padding-top : (strip-unit($line-height) - strip-unit(($font-size) * 1.3)) * .3333 + rem;
+}
+
+
+
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}

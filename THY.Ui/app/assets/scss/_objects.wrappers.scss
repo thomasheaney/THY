@@ -6,9 +6,14 @@
 
 .o-content--wrapper
 {
-     max-width:                          1140px;
+    @include u-padding(trbl,$s);
+    max-width:                          1140px;
     margin-right:                       auto;
     margin-left:                        auto;
+
+    @media only screen and (min-width : $md-viewport) {
+        @include u-padding(trbl,$m);
+    }
 }
 
 

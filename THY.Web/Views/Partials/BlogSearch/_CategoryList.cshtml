@@ -1,0 +1,17 @@
+﻿@model List<string>
+@using THY.Web.Models
+
+<div class="c-category-list">
+    <h4 class= "c-sidebar--heading">Categories</h4>
+    <ul class="c-category-list--items">
+        @foreach (var item in Model)
+        {
+            var tagPageUrl = "/blog/category/" + item;
+            <li class="c-category-list--item">
+                <a href="@tagPageUrl" class="">@item</a>
+            </li>
+        }
+    </ul>
+</div>
+
+

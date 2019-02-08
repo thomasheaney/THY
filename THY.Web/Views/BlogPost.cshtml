@@ -1,0 +1,52 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.BlogPost>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@using THY.Web.Helpers;
+@using Humanizer
+
+@{
+    Layout = "WebBase.cshtml";
+    var presentationHelper = new PresentationHelper();
+
+}
+
+@{
+    string imageUrl = Model.Content.HasValue("masthead") ? Url.GetCropUrl(Model.Content, "masthead", "Masthead").ToString() : "";
+
+    string categoryText = Model.Content.HasValue("category")
+        ? presentationHelper.FlattenCommaSeparatedList(Model.Content.Category, "/blog/category", "c-post-tag", true)
+        : "";
+
+    string tagText = Model.Content.HasValue("tags")
+        ? presentationHelper.FlattenCommaSeparatedList(Model.Content.Tags, "/blog/tags", "c-post-tag", false, "")
+        : "";
+
+}
+
+
+<article class="c-content c-post o-content--wrapper">
+
+    <header class="c-post--header">
+        @if (!string.IsNullOrEmpty(imageUrl))
+        {
+            <img src="@imageUrl" class="c-post--masthead" />
+        }
+        <h1 class="c-post--heading">@Model.Content.Name</h1>
+        <p class="c-post--meta">@Model.Content.CreateDate.ToOrdinalWords()  @*by @Umbraco.Field("creatorName")*@ in <span class="c-post-category">@Html.Raw(categoryText)</span></p>
+
+
+
+
+    </header>
+    <main class="c-post--content">
+
+        @Html.GetGridHtml(Model.Content, "gridEditor")
+    </main>
+    @{
+        if (!string.IsNullOrWhiteSpace(tagText))
+        {
+            <span class="c-post-tags c-post--content"> Tags: @Html.Raw(tagText)</span>
+        }
+    }
+
+</article>
+

@@ -1,0 +1,41 @@
+.c-site-header
+{
+    .o-flex {flex-wrap : wrap;}
+    flex-wrap : wrap;
+
+    &--logo{ 
+        @include u-margin(r,$m);
+    }
+    
+
+    &--contact{ text-align : right;}
+
+    &--icon {
+        display : inline-block;
+        width : 4rem;
+       
+        #twitter-icon {
+            fill : #c5d7dd;
+            &:hover { fill:#768be3}
+        }
+
+        #rss-icon {
+            #bg { fill :#c5d7dd;  }
+            &:hover #bg{ fill:#ea7819}
+        }
+
+    }
+
+
+    @media screen and (min-width: $md-viewport) {
+        .o-flex {flex-wrap : nowrap;}
+        &--logo{ flex-grow : 0; }
+        &--navigation{ flex-grow : 3;}
+        &--contact{ flex-grow : 1;}
+    }
+
+}
+
+
+
+        

@@ -1,0 +1,25 @@
+﻿.c-main-navigation {
+
+    text-align : left;
+    &--item {
+        @include u-uppercase();
+        @include u-padding(lr,$xs);
+        @include u-margin(r,$m);
+
+        text-decoration :               none;
+        color :                         $highlight500;
+        font-weight :                   $fontWeightMedium;
+        background-color :              $highlight100;
+
+        font-size :                     $ms-1;
+
+        &:hover,
+        &:focus {
+            text-decoration : none;
+            background-color :          $highlight500;
+            color :                     #fff;
+        }
+    }
+
+    
+}

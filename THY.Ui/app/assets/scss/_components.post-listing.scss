@@ -1,0 +1,81 @@
+﻿.c-post-listing {
+    margin: 0 auto;
+    width: 100%;
+    
+
+    &--page-heading
+    {
+        @include u-paddingBottom--l;
+    }
+
+    &--item {
+        @include u-padding(b,$xl);
+    }
+
+    &--image {
+        @include u-paddingTop--xs;
+        @include u-paddingRight--s;
+        float:                          left;
+        width: auto;
+        max-width: 150px;
+        max-height: 150px;
+    }
+
+    &--heading {
+        @include u-paddingBottom--xs;
+        color:                          $textColorDark;
+        //line-height: $lineHeightSmall;
+        font-size:                      $ms2;
+        font-weight:                    $fontWeightMedium;
+
+        a {
+            color:                      $textColor;
+
+           
+        }
+    }
+
+    p {
+        @include u-paddingBottom--0;
+        width :                         100%;
+
+    }
+
+    &--more-link {
+        display:                        block;
+        width:                          100%;
+        font-size:                      $ms-1;
+        text-align :                    right;
+    }
+
+ 
+
+    &--date,
+    &--author {
+        @include u-paddingRight--m;
+        color :                         $textColorFade;
+        font-size:                      $ms-2;
+    }
+
+
+
+    @media screen and (min-width: $md-viewport) {
+
+        float: left;
+    }
+}
+
+
+.c-content {
+
+    @media screen and (min-width: $md-viewport) {
+        &--main { @include u-paddingRight--xl; max-width : 65%;float : left;}
+        &--sidebar { @include u-paddingLeft--xl; float : right; max-width : 35%;}
+    }
+
+    
+
+
+     
+
+}

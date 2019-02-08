@@ -1,0 +1,82 @@
+﻿@model THY.Web.Models.HtmlMeta
+
+<!doctype html>
+<html class="no-js" lang="en-gb">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>@Model.PageTitle</title>
+    <meta name="description" content="@Model.PageDescription">
+
+    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/feed" />
+    <link rel="canonical" href="@Model.PageCanonical" />
+    <link rel="shortcut icon" href=".ico">
+
+    <meta property="og:title" content="@Model.OpenGraphTitle">
+    <meta property="og:description" content="@Model.OpenGraphDescription">
+    <meta property="og:image" content="@Model.OpenGraphImage">
+    <meta property="og:url" content="@Model.PageCanonical">
+    <meta property="og:site_name" content="@Model.OpenGraphSiteName">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@Model.TwitterCardSite" />
+
+    @{ if (!string.IsNullOrEmpty(Model.TwitterCardImageAlt))
+        {
+            <meta name="twitter:image:alt" content="@Model.TwitterCardImageAlt">
+        }
+    }
+    @{ if (!string.IsNullOrEmpty(Model.OpenGraphImage))
+        {
+            <meta property="twitter:image:src" content="@Model.OpenGraphImage" />
+        }
+    }
+
+
+
+    @*<link rel="stylesheet" href="/assets/css/styles.css">*@
+    <style>
+    @Html.Raw(System.IO.File.ReadAllText(Server.MapPath("~/assets/css/styles.min.css")))
+    </style>
+
+
+    <link href="/assets/prismjs/prism.css" rel="stylesheet" />
+    <script src="/assets/prismjs/prism.js"></script>
+</head>
+<body>
+    @*
+        Bare minimum spcial media share tags
+
+        From https://css-tricks.com/essential-meta-tags-social-media/
+
+        <!--  Essential META Tags -->
+
+        <meta property="og:title" content="European Travel Destinations">
+        <meta property="og:description" content="Offering tour packages for individuals or groups.">
+        <meta property="og:image" content="http://euro-travel-example.com/thumbnail.jpg">
+        <meta property="og:url" content="http://euro-travel-example.com/index.htm">
+        <meta name="twitter:card" content="summary_large_image">
+
+
+        <!--  Non-Essential, But Recommended -->
+
+        <meta property="og:site_name" content="European Travel, Inc.">
+        <meta name="twitter:image:alt" content="Alt text for image">
+
+        <!-- Add only if it is specified in the CMS -->
+        <meta property="twitter:image:src" content="https://moz.com/uploads/twitter_image/5b47f506581a93.44385792.png" />
+
+
+        <!--  Non-Essential, But Required for Analytics -->
+
+        <meta property="fb:app_id" content="your_app_id" />
+        <meta name="twitter:site" content="@website-username">
+
+        <!-- Others -->
+        <meta property="twitter:account_id" content="15651700" />
+        <meta property="fb:page_id" content="8489236245" />
+
+    *@

@@ -1,0 +1,15 @@
+﻿@model List<TagListItem>
+@using THY.Web.Models
+
+<div class="c-tag-list">
+    <h4 class= "c-sidebar--heading">Tags</h4>
+    <ul class="c-tag-list--items">
+        @foreach (var item in Model)
+        {
+            var tagPageUrl = "/blog/tags/" + item.Text;
+            <li  class="c-tag-list--item c-tag-list--item-size-@item.Weight ">
+                <a href="@tagPageUrl">@item.Text <span class="dp-fade-text">(@item.NodeCount)</span></a>
+            </li>
+        }
+    </ul>
+</div>
